@@ -1,0 +1,31 @@
+.section-about {
+  padding: 80px 16px;
+  text-align: center;
+}
+
+.section-about h2 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  margin-bottom: 8px;
+  color: #6b7280;
+}
+
+.section-about h1 {
+  font-size: 32px;
+  margin: 0 0 24px;
+  color: #0f172a;
+}
+
+/* Contenedor de la foto */
+.about-photo {
+  display: flex;
+  justify-content: right;
+}
+
+/* Imagen de perfil */
+.about-photo img {
+  width: 350px;
+  height: 350px;
+  border-radius: 40px;      /* círculo */
+}
