@@ -95,4 +95,12 @@
 }
 
 
+/* Estado cuando hay scroll */
+.site-header.scrolled {
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+  /* si quieres que el fondo cambie un pelín */
+ 
+}
+
 
