@@ -1,0 +1,101 @@
+/* ========= HERO  ========= */
+.hero {
+  position: relative;
+  width: 100vw;
+  min-height: calc(100vh - 140px); /* pantalla casi completa */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+
+}
+
+/* Fondo degradado animado */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 0% 0%,   rgba(59, 130, 246, 0.18) 0, transparent 55%),   /* azul suave arriba izq */
+    radial-gradient(circle at 100% 0%, rgba(45, 212, 191, 0.18) 0, transparent 55%),   /* verde agua arriba der */
+    radial-gradient(circle at 0% 100%, rgba(129, 140, 248, 0.18) 0, transparent 55%),  /* violeta suave abajo izq */
+    linear-gradient(120deg, #e5f0ff, #f9fafb, #e0f7ff); /* base muy clara */
+  background-size: 160% 160%;
+  filter: saturate(1.15);
+  animation: heroGradientMove 5s ease-in-out infinite alternate;
+  z-index: -1;
+}
+
+@keyframes heroGradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hero__inner {
+  max-width: 780px;
+  margin: 0 auto;
+  color: #f9fafb;
+}
+
+/* Eyebrow / etiqueta superior */
+.hero__eyebrow {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  margin-bottom: 20px;
+}
+
+/* Título grande tipo Dune */
+.hero__title {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 56px;
+  line-height: 1.1;
+  margin: 0 0 24px;
+}
+
+/* Subtítulo */
+.hero__subtitle {
+  font-size: 18px;
+  max-width: 520px;
+  margin: 0 auto 32px;
+}
+
+/* Botón pill centrado */
+.hero__cta {
+  border: 1px solid #111827;
+  padding: 14px 40px;
+  border-radius: 999px;
+  background: #fefce8;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.hero__cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.35);
+}
+
+/* Texto pequeñito debajo del botón */
+.hero__meta {
+  margin-top: 20px;
+  font-size: 13px;
+  opacity: 0.9;
+}
